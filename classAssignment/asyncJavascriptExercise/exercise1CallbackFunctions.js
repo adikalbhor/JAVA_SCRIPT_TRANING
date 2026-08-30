@@ -20,5 +20,17 @@
 // Once that works, try a bonus version that uses `Math.random()` to make the status 70% APPROVED / 30% REJECTED.
 
 function submitLeaveRequest(leaveType, callback) {
-//     // YOUR CODE HERE
+    console.log(`Submitting: ${leaveType}`)
+    const result = {
+        type: leaveType,
+        status: "APPROVED",
+        days :2 
+    }
+    callback(result);
 }
+
+submitLeaveRequest("Sick Leave", function(result) {
+    console.log("Request completed: " + result.type);
+    console.log("Status: " + result.status);
+});
+
