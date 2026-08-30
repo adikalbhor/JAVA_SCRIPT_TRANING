@@ -49,8 +49,19 @@ let employeeRecord = {
             Temp Note ${emp[i].tempNote} 
             Debug info : ${emp[i].debugInfo}
         `);
+
     }
     // for( let emprod of employeeRecord){
     //     console.log(`employeeID  ${emprod.employeeId} department : ${emprod.department} Temp Note ${emprod.tempNote} Debug info : ${emprod.debugInfo}`);
     // }
+<<<<<<< HEAD
     // employeeRecord
+=======
+    
+    console.log("------After deleted the objects ----------");
+    delete employeeRecord.tempNote;
+    delete employeeRecord.debugInfo;
+
+    console.log(employeeRecord);
+    console.log(`Does 'tempNote' exist? ${'tempNote' in employeeRecord}`);
+>>>>>>> e1bd0a2c1cb073f966ebd171a9471f0c0ca8db4a
