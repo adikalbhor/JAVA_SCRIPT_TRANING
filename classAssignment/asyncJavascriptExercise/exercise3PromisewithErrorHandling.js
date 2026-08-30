@@ -19,4 +19,26 @@
 // ✓ Login successful
 // ✗ Invalid credentials
 
-authenticateEmployee()
+function authenticateEmployee(employeeId,pin){
+    return new Promise (function (resolve,reject) {
+        setTimeout(() => {
+            if(employeeId === "EMP-001" && pin === "1234"){
+                resolve("Login Sucessfull")
+            }else{
+                reject("INvalid Credentials");
+            }
+        },500);
+    })
+}
+ 
+authenticateEmployee("EMP-001", "1234")
+    .then(message => console.log("✓ "+ message))
+    .catch(error => console.log("✗ " + error));  
+ 
+authenticateEmployee("EMP-001", "0000")
+    .then(message => console.log("✓ " + message))
+    .catch(error => console.log("✗ " + error));
+
+// ✓ Login successful
+// ✗ Invalid credentials
+ 
